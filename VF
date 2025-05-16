@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Hurdle - L'expertise juridique des athlètes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-hurdle text-blue-600 dark:text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900 dark:text-white">Legal Hurdle</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#accueil" class="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium">Accueil</a>
+                    <a href="#formules" class="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium">Nos Formules</a>
+                    <a href="#temoignages" class="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium">Témoignages</a>
+<!-- Bouton pour afficher le pop-up -->
+<button onclick="openForm()" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-smooth">
+  Audit Gratuit
+</button>
+
+<!-- Pop-up Formulaire -->
+<div id="popupForm" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
+    <button onclick="closeForm()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl">&times;</button>
+    <h2 class="text-lg font-semibold mb-4">Demande d'audit gratuit</h2>
+
+    <!-- Formulaire connecté à Formspree -->
+    <form action="https://formspree.io/f/xgvkoryn" method="POST">
+      <div class="mb-3">
+        <label class="block text-sm font-medium">Nom</label>
+        <input type="text" name="Nom" class="w-full border rounded px-3 py-2" required>
+      </div>
+      <div class="mb-3">
+        <label class="block text-sm font-medium">Prénom</label>
+        <input type="text" name="Prénom" class="w-full border rounded px-3 py-2" required>
+      </div>
+      <div class="mb-3">
+        <label class="block text-sm font-medium">Discipline</label>
+        <input type="text" name="Discipline" class="w-full border rounded px-3 py-2">
+      </div>
+      <div class="mb-3">
+        <label class="block text-sm font-medium">Problématique</label>
+        <textarea name="Problématique" class="w-full border rounded px-3 py-2" rows="3"></textarea>
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium">Numéro de téléphone</label>
+        <input type="tel" name="Téléphone" class="w-full border rounded px-3 py-2" required>
+      </div>
+      <div class="flex justify-end gap-2">
+        <button type="button" onclick="closeForm()" class="bg-gray-300 px-3 py-1 rounded">Annuler</button>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- JS pour ouvrir / fermer le formulaire -->
+<script>
+  function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
+  }
+
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+</script>
+
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+ <!-- Hero Section -->
+<section id="accueil" class="hero-gradient pt-24 pb-20 px-4 sm:px-6 lg:px-8 text-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="md:flex md:items-center md:justify-between">
+            <!-- Texte à gauche de l'image -->
+            <div class="md:w-1/2 mb-10 md:mb-0 space-y-6">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Votre succès, Notre expertise</h1>
+                <p class="text-xl mb-6">
+                    Conscient de la précarité du sport de haut niveau, notamment dans des sports peu médiatisés, et de la difficulté de trouver une stabilité financière et personnelle, l’équipe de Legal Hurdle a à cœur d’offrir aux athlètes un accompagnement juridique de qualité.
+                </p>
+
+                <p class="text-xl mb-8">
+                    Parce que s’entourer de professionnels compétents ne devrait pas être conditionné aux ressources financières, Legal Hurdle propose une méthode innovante par le biais d’un audit juridique gratuit ayant vocation à :
+                </p>
+                
+                <ul class="list-disc list-inside mt-4 space-y-2 text-xl">
+                    <li>Faire un état de la situation juridique actuelle.</li>
+                    <li>Discuter des axes d’optimisation et des éventuelles étapes à mettre en œuvre.</li>
+                    <li>Catégoriser l’athlète en tant que talent émergent, confirmé ou professionnel.</li>
+                    <li>Bénéficier d’un taux horaire privilégié pendant une durée ferme d’une année.</li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- Nouveau bouton pour ouvrir le formulaire -->
+<button onclick="document.getElementById('formModal').classList.remove('hidden')"
+        class="bg-white text-blue-600 px-6 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition-smooth text-center">
+    Je demande mon audit gratuit
+</button>
+
+<!-- Modal avec formulaire -->
+<div id="formModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-xl relative">
+    
+    <!-- Bouton de fermeture -->
+    <button onclick="document.getElementById('formModal').classList.add('hidden')"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 dark:hover:text-white text-xl font-bold">&times;</button>
+
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Demande d'audit gratuit</h2>
+
+    <form action="https://formspree.io/f/xgvkoryn" method="POST" class="space-y-4">
+      <div>
+        <label for="nom" class="block text-gray-700 dark:text-gray-300">Nom</label>
+        <input type="text" id="nom" name="nom" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
+      </div>
+
+      <div>
+        <label for="prenom" class="block text-gray-700 dark:text-gray-300">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
+      </div>
+
+      <div>
+        <label for="sport" class="block text-gray-700 dark:text-gray-300">Discipline</label>
+        <input type="text" id="sport" name="sport" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
+      </div>
+
+      <div>
+        <label for="problematique" class="block text-gray-700 dark:text-gray-300">Problématique</label>
+        <textarea id="problematique" name="problematique" rows="4" required
+                  class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+      </div>
+
+      <div>
+        <label for="telephone" class="block text-gray-700 dark:text-gray-300">Numéro de téléphone</label>
+        <input type="tel" id="telephone" name="telephone" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white"
+               pattern="^(\+?\d{1,3})?[\s.-]?\(?\d{2,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{3,4}$">
+      </div>
+
+      <div class="text-right">
+        <button type="submit"
+                class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+                    <a href="#formules" class="border-2 border-white text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-white hover:text-blue-600 transition-smooth text-center">
+                        Découvrir nos formules
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image à droite du texte -->
+            <div class="md:w-1/2 flex justify-center md:ml-12">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1069&q=80" alt="Athlète en action" class="rounded-lg shadow-xl max-w-full h-auto transform transition-transform hover:scale-105">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Nos Formules -->
+    <section id="formules" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Un accompagnement sur mesure</h2>
+<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4">
+  Notre équipe s’appuie sur un réseau d’avocats partenaires dans différentes spécialités, ayant tous une appétence particulière pour la sphère sportive. N’hésitez pas à nous contacter pour une mise en relation !
+</p>
+
+<div class="text-center">
+  <button onclick="document.getElementById('formModal').classList.remove('hidden')"
+          class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+    Je remplis le formulaire
+  </button>
+</div>
+
+<div id="formModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-xl relative">
+    
+    <!-- Bouton de fermeture -->
+    <button onclick="document.getElementById('formModal').classList.add('hidden')"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 dark:hover:text-white text-xl font-bold">&times;</button>
+
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Formulaire de contact</h2>
+
+    <form action="https://formspree.io/f/xgvkoryn" method="POST" class="space-y-4">
+      <div>
+        <label for="nom" class="block text-gray-700 dark:text-gray-300">Nom</label>
+        <input type="text" id="nom" name="nom" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
+      </div>
+
+      <div>
+        <label for="prenom" class="block text-gray-700 dark:text-gray-300">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
+      </div>
+
+      <div>
+        <label for="sport" class="block text-gray-700 dark:text-gray-300">Discipline</label>
+        <input type="text" id="sport" name="sport" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white">
+      </div>
+
+      <div>
+        <label for="problematique" class="block text-gray-700 dark:text-gray-300">Problématique</label>
+        <textarea id="problematique" name="problematique" rows="4" required
+                  class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+      </div>
+
+      <div>
+        <label for="telephone" class="block text-gray-700 dark:text-gray-300">Numéro de téléphone</label>
+        <input type="tel" id="telephone" name="telephone" required
+               class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white"
+               pattern="^(\+?\d{1,3})?[\s.-]?\(?\d{2,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{3,4}$">
+      </div>
+
+      <div class="text-right">
+        <button type="submit"
+                class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Formule Émergence -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-8 shadow-md card-hover transition-smooth">
+                    <div class="mb-6">
+                        <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-sm font-semibold px-3 py-1 rounded-full">Émergence</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pour les athlètes en devenir</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Conseils personnalisés pour bien démarrer votre carrière.</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-gray-900 dark:text-white">A partir de 49€ HT/h</span>
+                        <span class="text-gray-500 dark:text-gray-400 block">Sur devis si cas exceptionnel</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Consultation et note écrite</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Accompagnement toutes matières</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Conseils juridiques et stratégiques</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Assistance contentieuse</span>
+                        </li>
+
+                </div>
+                
+                <!-- Formule Haut Niveau -->
+                <div class="bg-blue-600 rounded-xl p-8 shadow-lg card-hover transition-smooth transform scale-105">
+                    <div class="mb-6">
+                        <span class="inline-block bg-blue-700 text-white text-sm font-semibold px-3 py-1 rounded-full">Haut Niveau</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Pour les athlètes confirmés</h3>
+                    <p class="text-blue-100 mb-6">Accompagnement approfondi pour sécuriser vos intérêts.</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-white">A partir de 99€ HT/h</span>
+                        <span class="text-blue-200 block">Sur devis si cas exceptionnel</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mt-1 mr-2"></i>
+                            <span class="text-blue-100"> Consultation et note écrite</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mt-1 mr-2"></i>
+                            <span class="text-blue-100">Accompagnement toutes matières</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mt-1 mr-2"></i>
+                            <span class="text-blue-100">Conseils juridiques et stratégiques</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-white mt-1 mr-2"></i>
+                            <span class="text-blue-100">Assistance contentieuse </span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Formule Pro -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-8 shadow-md card-hover transition-smooth">
+                    <div class="mb-6">
+                        <span class="inline-block bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 text-sm font-semibold px-3 py-1 rounded-full">Professionnel</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pour les athlètes professionnels</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Suivi avancé 360° pour optimiser et protéger vos droits.</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-gray-900 dark:text-white">A partir de 149€ HT/h</span>
+                        <span class="text-gray-500 dark:text-gray-400 block">Sur devis si cas exceptionnel</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Consultation et note écrite</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Accompagnement toutes matières</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Conseils juridiques et stratégiques</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Assistance contentieuse</span>
+                        </li>
+    </section>
+<!-- Témoignages -->
+<section id="temoignages" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ils nous font confiance</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Découvrez ce que disent les athlètes que nous accompagnons</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Témoignage 1 -->
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-smooth hover:shadow-lg">
+                <p class="text-lg text-gray-800 dark:text-gray-200 italic mb-4">"Grâce à Legal Hurdle, j’ai pu négocier mon premier contrat pro en toute sérénité. Leur accompagnement m’a permis de comprendre mes droits et de me concentrer pleinement sur ma performance."</p>
+                <div class="flex items-center space-x-4">
+                    <img src="https://lh5.googleusercontent.com/proxy/uafrWn9SwSCicCwGzJ2Dc7MTYrnX3DcKmlotLTWMsmDVeZyqLQEULP5iFsQFcch5l3jVeLBtDckPF_Ql1wA3eZdzKa1PJLThYLqD-seQ_8xCi7OkUy_3EfjBQQtv" alt="Athlète" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <p class="font-semibold text-gray-900 dark:text-white">Sofia P.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Sprinteur - Équipe de France</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-smooth hover:shadow-lg">
+                <p class="text-lg text-gray-800 dark:text-gray-200 italic mb-4">"L’équipe a su protéger mes intérêts lors de mon transfert international d'équipementier. Leur expertise m’a évité bien des pièges. Je recommande à 100% à tous les sportifs en quête de sérénité juridique."</p>
+                <div class="flex items-center space-x-4">
+                    <img src="https://www.naak.com/cdn/shop/articles/Blog_article_banner_b0548789-492b-4e3b-9022-cdf18bcf6353_1600x.jpg?v=1707859262" alt="Athlète" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <p class="font-semibold text-gray-900 dark:text-white">Baptiste C.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Traileur professionnel - Champion du monde par équipe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-silver">Legal Hurdle</h3>
+                    <p class="text-gray-400">Accompagnement juridique et stratégique pour sportifs de haut niveau & athlètes professionnels</p>
+                </div>
+                <div class="flex space-x-6">
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>© 2025 Legal Hurdle. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+  
